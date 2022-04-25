@@ -6456,7 +6456,6 @@ function SaveToStorage(SurveyName, ButtonName1, ButtonName2, ButtonName3) {
     }};
 
     let data = `{
-        "SurveyName": `+ SurveyName + `,
         "Mark1": `+ firstValue + `,
         "Mark2": `+ secondValue + `,
         "Mark3": `+ thirdValue + `
