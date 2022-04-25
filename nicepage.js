@@ -6435,7 +6435,7 @@ function change(ButtonValue, ButtonNameToChange)
     elemToChange.hidden=false;
 }
 
-function SaveToStorage(SurveyName, ButtonName1, ButtonName2, ButtonName3) {
+function SaveToStorage(ButtonName1, ButtonName2, ButtonName3) {
     var firstValue = document.getElementById(ButtonName1).value;
     var secondValue  = document.getElementById(ButtonName2).value;
     var thirdValue  = document.getElementById(ButtonName3).value;
