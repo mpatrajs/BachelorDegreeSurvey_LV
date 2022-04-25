@@ -6443,4 +6443,23 @@ function SaveToStorage(ButtonName1, ButtonName2, ButtonName3) {
     localStorage.setItem('First Question Answer :', firstValue); 
     localStorage.setItem('Second Question Answer :', secondValue); 
     localStorage.setItem('Third Question Answer :', thirdValue); 
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://mana-aptauja-default-rtdb.europe-west1.firebasedatabase.app/:mark/example.json");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        console.log(xhr.status);
+        console.log(xhr.responseText);
+    }};
+
+    let data = `{
+        "Mark1": `+ firstValue + `,
+        "Mark2": `+ secondValue + `,
+        "Mark3": `+ thirdValue + `
+      }`;
+
+    xhr.send(data);
 }
